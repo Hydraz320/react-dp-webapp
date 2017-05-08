@@ -1,0 +1,25 @@
+{
+  "name": "react-dp-webapp",
+  "version": "0.0.1",
+  "description": "react dianping webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "author": "gz",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "open-browser-webpack-plugin": "0.0.5",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
