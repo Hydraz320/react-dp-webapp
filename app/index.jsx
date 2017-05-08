@@ -1,20 +1,19 @@
-/**
- * Created by hydra320 on 2017/5/8.
- */
 import React from 'react'
 import {render} from 'react-dom'
 
+// 通用样式
 import './static/css/common.less'
 
-class Hello extends React.Component {
-  render() {
-    return (
-      <p>Hello</p>
-    )
-  }
+// 引入容器组件
+import Todo from './containers/Todo';
+
+// 性能检测
+import Perf from 'react-addons-perf'
+if (__DEV__) {
+  window.Perf = Perf
 }
 
 render(
-  <Hello/>,
+  <Todo />,
   document.getElementById('root')
 )
