@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV==dev webpack-dev-server --progress --profile --colors --hot",
-    "build": "webpack --progress --profile --colors"
+    "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors"
   },
   "keywords": [
     "react",
