@@ -133,7 +133,7 @@ class List extends Component {
 export default List
 ```
 
-这里是怎么个意思呢？我们可以看到render里渲染了3个<li>，每个都绑定了click事件，调用_clickHandler方法，而这个方法内部，正是通过this.props.history拿到history对象，并通过push方法跳转到detail页面。
+这里是怎么个意思呢？我们可以看到render里渲染了3个/<li/>，每个都绑定了click事件，调用_clickHandler方法，而这个方法内部，正是通过this.props.history拿到history对象，并通过push方法跳转到detail页面。
 
 当然，history还支持replace等多种常用方法，具体就可以去[文档](https://github.com/ReactTraining/history)里看看哦。
 
