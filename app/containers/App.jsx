@@ -1,14 +1,17 @@
-import {Component} from 'react'
+import React, {Component} from 'react'
 import {render} from 'react-dom'
 
-export default class App {
+export default class App extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-      <div>{this.props.children}</div>
+      <div>
+        <h1>App</h1>
+        {this.props.children}
+      </div>
     )
   }
 }
