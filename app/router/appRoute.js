@@ -16,17 +16,13 @@ export default class AppRoute extends Component {
   }
 
   render() {
-    let match = this.props.match
-    console.log(match)
     return (
-      <div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/list" component={List} />
-          <Route path="/detail:id" component={Detail} />
-          <Route path="/*" component={NotFound} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/list" component={List}/>
+        <Route path="/detail:id" component={Detail}/>
+        <Route component={NotFound}/>
+      </Switch>
     )
   }
 }
