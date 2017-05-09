@@ -1,8 +1,7 @@
 import React from 'react'
 import {render} from 'react-dom'
-
-// 引入路由
-import RouteMap from './router/AppRouter'
+import {Provider} from 'react-redux'
+import ConfigureStore from './store/ConfigureStore'
 
 // 通用样式
 import './static/css/common.less'
@@ -13,7 +12,12 @@ if (__DEV__) {
   window.Perf = Perf
 }
 
+import Hello from './containers/Hello'
+
+const store = ConfigureStore()
 render(
-  <RouteMap />,
+  <Provider store={store}>
+    <Hello/>
+  </Provider>,
   document.getElementById('root')
 )
