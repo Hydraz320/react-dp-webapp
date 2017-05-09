@@ -98,7 +98,8 @@ export default class SubRoute extends Component {
 }
 ```
 
-通过[这篇笔记](./react-routerV4的Page%20Not%20Found该怎么做.md)所提到的那样，引入各个子组件，实现渲染。然后在需要实现路由跳转的组件内部，如List内部跳转到Detail，代码是这样的：
+通过[这篇笔记](./react-routerV4的Page%20Not%20Found该怎么做.md)所提到的那样，引入各个子组件，实现渲染。当然，如果想追求极致或者项目真的很大，还是需要用一下**静态资源懒加载**。然后在需要实现路由跳转的组件内部，如List内部跳转到Detail，代码是这样的：
+
 ```jsx harmony
 import React, {Component} from 'react'
 import {render} from 'react-dom'
