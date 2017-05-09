@@ -37,6 +37,9 @@ let mapStateToProps = (state) => {
   }
 }
 
+// 通过这层映射 C组件内部将可通过this.props.actions拿到actions对象
+// 这个actions包含login和updateCityName两个由bindActionCreators包装过的方法
+// 调用即会触发dispatch 其实在上面的componentDidMount里面也可以看到
 let mapDispatchToProps = (dispatch) => {
   return {
     userinfoActions: bindActionCreators(userinfoActions, dispatch)

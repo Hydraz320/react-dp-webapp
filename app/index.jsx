@@ -15,6 +15,7 @@ if (__DEV__) {
 import Hello from './containers/Hello'
 
 const store = ConfigureStore()
+
 render(
   <Provider store={store}>
     <Hello/>
