@@ -2,7 +2,7 @@ import React from 'react'
 import {render} from 'react-dom'
 
 // 引入路由
-import RouteMap from './router/routeMap'
+import RouteMap from './router/AppRouter'
 
 // 通用样式
 import './static/css/common.less'

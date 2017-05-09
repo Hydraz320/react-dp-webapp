@@ -10,7 +10,7 @@ import Home from '../containers/Home'
 import List from '../containers/List'
 import NotFound from '../containers/NotFound'
 
-export default class AppRoute extends Component {
+export default class SubRoute extends Component {
   constructor(props) {
     super(props)
   }
@@ -20,7 +20,7 @@ export default class AppRoute extends Component {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/list" component={List}/>
-        <Route path="/detail:id" component={Detail}/>
+        <Route path="/detail/:id" component={Detail}/>
         <Route component={NotFound}/>
       </Switch>
     )
