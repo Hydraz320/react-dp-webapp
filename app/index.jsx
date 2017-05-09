@@ -1,11 +1,11 @@
 import React from 'react'
 import {render} from 'react-dom'
 
+// 引入路由
+import RouteMap from './router/routeMap'
+
 // 通用样式
 import './static/css/common.less'
-
-// 引入容器组件
-import Todo from './containers/Todo';
 
 // 性能检测
 import Perf from 'react-addons-perf'
@@ -14,6 +14,6 @@ if (__DEV__) {
 }
 
 render(
-  <Todo />,
+  <RouteMap />,
   document.getElementById('root')
 )
