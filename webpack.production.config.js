@@ -38,7 +38,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        use: "babel-loader"
       },
       {
         test: /\.(png|gif|jpe?g|bmp)$/i,
@@ -46,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.(png|woff|woff2|svg|ttf|eot)($\?)/i,
-        loader: ['url-loader?limit=8096&name=fonts/[name]-[chunkhash:8].[ext]']
+        use: ['url-loader?limit=8096&name=fonts/[name]-[chunkhash:8].[ext]']
       }
     ]
   },
