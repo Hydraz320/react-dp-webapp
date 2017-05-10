@@ -5,7 +5,13 @@ import {connect} from 'react-redux'
 import * as userinfoActions from '../../actions/userinfo'
 
 export default class Search extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
-    <div>Search</div>
+    return (
+      <div>Search</div>
+    )
   }
 }

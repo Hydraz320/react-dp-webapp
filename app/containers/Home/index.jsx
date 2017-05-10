@@ -5,8 +5,14 @@ import {connect} from 'react-redux'
 import * as userinfoActions from '../../actions/userinfo'
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
-    <div>Home</div>
+    return (
+      <div>Home</div>
+    )
   }
 }
 

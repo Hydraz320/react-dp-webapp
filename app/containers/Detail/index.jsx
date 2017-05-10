@@ -5,7 +5,13 @@ import {connect} from 'react-redux'
 import * as userinfoActions from '../../actions/userinfo'
 
 export default class Detail extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
-    <div>Detail</div>
+    return (
+      <div>Detail</div>
+    )
   }
 }
