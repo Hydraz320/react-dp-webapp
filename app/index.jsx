@@ -12,13 +12,16 @@ if (__DEV__) {
   window.Perf = Perf
 }
 
-import Hello from './containers/Hello'
+// 引入路由
+import AppRouter from './router/AppRouter'
 
+// 生成store 内部有去拿reducer
 const store = ConfigureStore()
 
+// 渲染
 render(
   <Provider store={store}>
-    <Hello/>
+    <AppRouter history={AppRouter} />
   </Provider>,
   document.getElementById('root')
 )

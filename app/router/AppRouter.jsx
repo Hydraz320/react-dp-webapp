@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import {render} from 'react-dom'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import App from '../containers/App'
 import SubRoute from './subRoute'
@@ -9,7 +8,7 @@ import SubRoute from './subRoute'
 import createBrowserHistory from 'history/createBrowserHistory'
 const customHistory = createBrowserHistory()
 
-export default class RouteMap extends Component {
+export default class AppRouter extends Component {
   constructor(props) {
     super(props)
   }
