@@ -4,8 +4,10 @@ import {connect} from 'react-redux'
 
 import * as userinfoActions from '../../actions/userinfo'
 
-export default class Home extends Component {
+class Home extends Component {
   render() {
     <div>Home</div>
   }
 }
+
+export default Home
