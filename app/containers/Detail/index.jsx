@@ -9,11 +9,13 @@ export default class Detail extends Component {
   constructor(props) {
     super(props)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
+    console.log('Detail constructor')
   }
 
   render() {
+    console.log(this.props.match)
     return (
-      <div>Detail{this.props.params.id}</div>
+      <div>Detail</div>
     )
   }
 }
