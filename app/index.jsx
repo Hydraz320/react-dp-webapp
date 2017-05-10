@@ -21,7 +21,7 @@ const store = ConfigureStore()
 // 渲染
 render(
   <Provider store={store}>
-    <AppRouter history={AppRouter} />
+    <AppRouter />
   </Provider>,
   document.getElementById('root')
 )

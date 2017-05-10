@@ -2,15 +2,16 @@
  * Created by hydra320 on 2017/5/9.
  */
 import React, {Component} from 'react'
-import {render} from 'react-dom'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
-import Detail from '../containers/Detail'
 import Home from '../containers/Home'
-import List from '../containers/List'
-import NotFound from '../containers/NotFound'
+import User from '../containers/User'
+import City from '../containers/City'
+import Search from '../containers/Search'
+import Detail from '../containers/Detail'
+import NotFound from '../containers/404'
 
-export default class SubRoute extends Component {
+export default class SubRouter extends Component {
   constructor(props) {
     super(props)
   }
@@ -19,7 +20,9 @@ export default class SubRoute extends Component {
     return (
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/list" component={List}/>
+        <Route path="/city" component={City}/>
+        <Route path="/user" component={User}/>
+        <Route path="/search/:type(/:keyword)" component={Search}/>
         <Route path="/detail/:id" component={Detail}/>
         <Route component={NotFound}/>
       </Switch>

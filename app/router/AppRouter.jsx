@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-import App from '../containers/App'
-import SubRoute from './subRoute'
+import App from '../containers/'
+import SubRouter from './SubRouter'
 
 // 让Router有用js跳转的能力 另一种方法是link标签
 import createBrowserHistory from 'history/createBrowserHistory'
@@ -17,7 +17,7 @@ export default class AppRouter extends Component {
     return (
       <Router history={customHistory}>
         <App>
-          <Route path="/" component={SubRoute}/>
+          <Route path="/" component={SubRouter}/>
         </App>
       </Router>
     )
