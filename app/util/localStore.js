@@ -16,6 +16,7 @@ export default {
   },
   setItem: (key, value) => {
     try {
+      // ios 无痕模式会报错 所以需要捕获一下异常
       localStorage.setItem(key, value)
     } catch (e) {
       if(__DEV__) {
