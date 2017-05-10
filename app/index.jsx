@@ -3,8 +3,11 @@ import {render} from 'react-dom'
 import {Provider} from 'react-redux'
 import ConfigureStore from './store/ConfigureStore'
 
-// 通用样式
+// 淘宝样式reset
+import './static/css/reset.css'
 import './static/css/common.less'
+// 阿里妈妈字体
+import './static/font/iconfont'
 
 // 性能检测
 import Perf from 'react-addons-perf'

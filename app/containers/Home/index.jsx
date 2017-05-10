@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 
 import * as userinfoActions from '../../actions/userinfo'
 
+import HomeHeader from '../../components/HomeHeader'
+
 class Home extends Component {
   constructor(props) {
     super(props)
@@ -15,8 +17,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Home</h1>
-        <Link to="/detail/1">Detail:1</Link>
+        <HomeHeader/>
       </div>
     )
   }
