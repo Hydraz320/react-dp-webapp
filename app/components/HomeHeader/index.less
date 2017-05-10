@@ -1,21 +1,55 @@
 .header-container {
   display: flex;
+  padding: 10px 14px;
+  background-color: rgb(252, 103, 62);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .header-city {
-  width: 100px;
-  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  margin: 5px 0;
+  text-align: left;
+  .icon-unfold {
+    font-size: 14px;
+  }
 }
 
 .header-search {
   flex: 1;
+  .header-search-inner {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 5px;
+    .icon-search {
+      color: #ccc;
+    }
+    input {
+      margin-left: 4px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
 }
 
 .header-user {
-  width: 100px;
-  background-color: aquamarine;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 36px;
+  margin: 5px 5px 5px 0;
+  .icon-yidiandiantubiao08 {
+    font-size: 20px;
+    color: #fff;
+  }
 }
 
-.icon-unfold {
-  font-size: 14px;
-}
+
+
+
+
+

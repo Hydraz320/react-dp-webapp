@@ -12,14 +12,27 @@ export default class HomeHeader extends Component {
   render() {
     return (
       <div className="header-container">
-        <div className="header-city">城市</div>
+        <div className="header-city">
+          <span>城市</span>
+          <svg className="icon icon-unfold" aria-hidden="true">
+            <use xlinkHref="#icon-unfold"></use>
+          </svg>
+        </div>
 
-        <svg className="icon icon-unfold" aria-hidden="true">
-          <use xlinkHref="#icon-unfold"></use>
-        </svg>
+        <div className="header-search">
+          <div className="header-search-inner">
+            <svg className="icon icon-search" aria-hidden="true">
+              <use xlinkHref="#icon-search"></use>
+            </svg>
+            <input type="text" placeholder="请输入关键字"/>
+          </div>
+        </div>
 
-        <div className="header-search"><input type="text"/></div>
-        <div className="header-user">用户</div>
+        <div className="header-user">
+          <svg className="icon icon-yidiandiantubiao08" aria-hidden="true">
+            <use xlinkHref="#icon-yidiandiantubiao08"></use>
+          </svg>
+        </div>
       </div>
     )
   }
