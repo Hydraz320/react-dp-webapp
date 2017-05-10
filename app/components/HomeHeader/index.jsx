@@ -13,7 +13,7 @@ export default class HomeHeader extends Component {
     return (
       <div className="header-container">
         <div className="header-city">
-          <span>城市</span>
+          <span>{this.props.cityName}</span>
           <svg className="icon icon-unfold" aria-hidden="true">
             <use xlinkHref="#icon-unfold"></use>
           </svg>
