@@ -8,6 +8,9 @@ import * as userinfoActions from '../../actions/userinfo'
 
 import HomeHeader from '../../components/HomeHeader'
 import Category from '../../components/Category'
+// mock数据 应该是异步请求的
+import SwipeData from '../../components/Category/swipeData'
+
 
 class Home extends Component {
   constructor(props) {
@@ -19,7 +22,7 @@ class Home extends Component {
     return (
       <div className="back-color">
         <HomeHeader cityName={this.props.userinfo.cityName} />
-        <Category/>
+        <Category pages={this.props.swipedata.swipeData} />
       </div>
     )
   }
@@ -35,7 +38,8 @@ class Home extends Component {
 // 反正我是清楚了……
 const mapStateToProps = (state) => {
   return {
-    userinfo: state.userinfo
+    userinfo: state.userinfo,
+    swipedata: state.swipedata
   }
 }
 

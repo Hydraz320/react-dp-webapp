@@ -5,6 +5,10 @@ import {connect} from 'react-redux'
 import LocalStore from '../util/localStore'
 import {CITYNAME} from '../config/localConfigKey'
 import * as userInfoActionFromOtherFile from '../actions/userinfo'
+import * as swipeDataActionFromOtherFile from '../actions/swipedata'
+
+// 应该是异步获取的 当然本地写死也没什么 这里是直接import引入
+import SwipeData from '../components/Category/swipeData'
 
 class App extends Component {
   constructor(props) {
@@ -20,6 +24,9 @@ class App extends Component {
     let cityName = LocalStore.getItem(CITYNAME)
     this.props.userinfoActions.update({
       cityName: '上海'
+    })
+    this.props.swipeDataActions.swipe({
+      swipeData: SwipeData
     })
     this.setState({initDone: true})
   }
@@ -43,7 +50,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    userinfoActions: bindActionCreators(userInfoActionFromOtherFile, dispatch)
+    userinfoActions: bindActionCreators(userInfoActionFromOtherFile, dispatch),
+    swipeDataActions: bindActionCreators(swipeDataActionFromOtherFile, dispatch)
   }
 }
 

@@ -5,8 +5,6 @@ import './index.less'
 
 import ReactSwipe from 'react-swipe'
 
-import SwipeData from './swipeData'
-
 export default class Category extends Component {
   constructor(props) {
     super(props)
@@ -14,12 +12,7 @@ export default class Category extends Component {
 
     this.state = {
       index: 0,
-      pages: []
     }
-  }
-
-  componentWillMount() {
-    this.setState({pages: SwipeData})
   }
 
   render() {
@@ -30,7 +23,8 @@ export default class Category extends Component {
         this.setState({index: index})
       }
     }
-    let pages = this.state.pages
+    let pages = this.props.pages
+    
     console.log(pages)
     return (
       <div className="home-category">
