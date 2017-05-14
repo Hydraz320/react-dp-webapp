@@ -28,9 +28,9 @@ export default class HomeHeader extends Component {
           </div>
         </div>
 
-        <div className="header-user">
-          <svg className="icon icon-yidiandiantubiao08" aria-hidden="true">
-            <use xlinkHref="#icon-yidiandiantubiao08"></use>
+        <div className="header-geren">
+          <svg className="icon icon-geren" aria-hidden="true">
+            <use xlinkHref="#icon-geren"></use>
           </svg>
         </div>
       </div>

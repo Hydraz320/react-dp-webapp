@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import * as userinfoActions from '../../actions/userinfo'
 
 import HomeHeader from '../../components/HomeHeader'
+import Category from '../../components/Category'
 
 class Home extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class Home extends Component {
     return (
       <div>
         <HomeHeader cityName={this.props.userinfo.cityName} />
+        <Category/>
       </div>
     )
   }
