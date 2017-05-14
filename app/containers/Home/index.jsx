@@ -17,7 +17,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="back-color">
         <HomeHeader cityName={this.props.userinfo.cityName} />
         <Category/>
       </div>

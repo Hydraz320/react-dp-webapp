@@ -25,23 +25,26 @@ export default class Category extends Component {
   render() {
     let config = {
       auto: 0, // 不自己动
+      continuous: false,
       callback: (index, elem) => {
         this.setState({index: index})
       }
     }
     let pages = this.state.pages
+    console.log(pages)
     return (
       <div className="home-category">
-        <ReactSwipe swipeOptions={config}>
+        <ReactSwipe className="swipe" swipeOptions={config}>
           {
             pages.map((page, pageIndex) => {
               return (<div key={pageIndex} className="page">
                 {
                   page.map((item, itemIndex) => {
                     return <div key={itemIndex} className="item">
-                      <svg className={item.iconName} aria-hidden="true">
+                      <svg className={`icon ${item.iconName}`} aria-hidden="true">
                         <use xlinkHref={`#${item.iconName}`}></use>
                       </svg>
+                      <div className="title">{item.title}</div>
                     </div>
                   })
                 }
@@ -50,8 +53,12 @@ export default class Category extends Component {
           }
         </ReactSwipe>
 
-        <div className="circle">
-
+        <div className="circle-container">
+          {
+            pages.map((page, pageIndex) => {
+              return (<div key={pageIndex} className={`circle${this.state.index === pageIndex ? ' selected': ''}`}></div>)
+            })
+          }
         </div>
       </div>
 

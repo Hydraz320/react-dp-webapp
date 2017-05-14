@@ -25,7 +25,7 @@ module.exports = [
     },
     {
       title: '火锅',
-      iconName: 'icon-gediancanhuoguo'
+      iconName: 'icon-huoguo1'
     },
     {
       title: '丽人',
