@@ -26,6 +26,6 @@ router.get('/api/homelist/:city/:page', async (ctx) => {
   ctx.body = homeListData
 });
 
-app.use(router.route(), router.allowedMethods())
+app.use(router.routes()).use(router.allowedMethods())
 app.listen(3000)
 console.log('server listening -p 3000...')

@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=dev webpack-dev-server --progress --profile --colors --hot",
+    "mock": "node ./mock/server.js",
     "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors"
   },
   "keywords": [
@@ -46,6 +47,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "es6-promise": "^4.1.0",
     "react": "^15.5.4",
     "react-addons-perf": "^15.4.2",
     "react-addons-pure-render-mixin": "^15.5.2",
@@ -54,6 +56,7 @@
     "react-router-dom": "^4.1.1",
     "react-swipe": "^5.0.8",
     "redux": "^3.6.0",
-    "swipe-js-iso": "^2.0.3"
+    "swipe-js-iso": "^2.0.3",
+    "whatwg-fetch": "^2.0.3"
   }
 }
