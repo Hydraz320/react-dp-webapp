@@ -9,7 +9,21 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      actions: path.resolve(__dirname, 'app/actions/'),
+      components: path.resolve(__dirname, 'app/components/'),
+      config: path.resolve(__dirname, 'app/config/'),
+      constants: path.resolve(__dirname, 'app/constants/'),
+      containers: path.resolve(__dirname, 'app/containers/'),
+      fetch: path.resolve(__dirname, 'app/fetch/'),
+      reducers: path.resolve(__dirname, 'app/reducers/'),
+      router: path.resolve(__dirname, 'app/router/'),
+      static: path.resolve(__dirname, 'app/static/'),
+      store: path.resolve(__dirname, 'app/store/'),
+      util: path.resolve(__dirname, 'app/util/'),
+      mock: path.resolve(__dirname, 'mock/')
+    }
   },
   module: {
     rules: [

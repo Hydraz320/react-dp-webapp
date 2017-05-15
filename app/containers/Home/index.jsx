@@ -1,16 +1,10 @@
 import React, {Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import { Link } from 'react-router-dom'
 
-import * as userinfoActions from '../../actions/userinfo'
-
-import HomeHeader from '../../components/HomeHeader'
-import Category from '../../components/Category'
-// mock数据 应该是异步请求的
-import SwipeData from '../../components/Category/swipeData'
-
+import HomeHeader from 'components/HomeHeader'
+import Category from 'components/Category'
+import Ad from './subpage/Ad'
 
 class Home extends Component {
   constructor(props) {
@@ -23,6 +17,7 @@ class Home extends Component {
       <div className="back-color">
         <HomeHeader cityName={this.props.userinfo.cityName} />
         <Category pages={this.props.swipedata.swipeData} />
+        <Ad />
       </div>
     )
   }

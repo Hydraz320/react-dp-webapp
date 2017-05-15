@@ -24,8 +24,7 @@ export default class Category extends Component {
       }
     }
     let pages = this.props.pages
-    
-    console.log(pages)
+
     return (
       <div className="home-category">
         <ReactSwipe className="swipe" swipeOptions={config}>
