@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import HomeHeader from 'components/HomeHeader'
 import Category from 'components/Category'
 import Ad from './subpage/Ad'
+import List from './subpage/List'
 
 class Home extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class Home extends Component {
         <HomeHeader cityName={this.props.userinfo.cityName} />
         <Category pages={this.props.swipedata.swipeData} />
         <Ad />
+        <List cityName={this.props.userinfo.cityName} />
       </div>
     )
   }

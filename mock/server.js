@@ -16,7 +16,7 @@ router.get('/api/homead', async (ctx) => {
 // home首页 猜你喜欢
 let homeListData = require('./home/list')
 router.get('/api/homelist/:city/:page', async (ctx) => {
-  const params = this.params
+  const params = ctx.params
   const paramsCity = params.city
   const paramsPage = params.page
 
