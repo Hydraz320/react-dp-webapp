@@ -22,7 +22,7 @@ module.exports = {
             title: '服装定制',
             subTitle: '原价xx元，现价xx元，可修改一次',
             price: '1980',
-            distance: '160',
+            distance: '160m',
             mumber: '106'
         },
         {
@@ -30,7 +30,7 @@ module.exports = {
             title: '婚纱摄影',
             subTitle: '免费试穿，拍照留念',
             price: '2899',
-            distance: '160',
+            distance: '160m',
             mumber: '58'
         },
         {
@@ -38,7 +38,7 @@ module.exports = {
             title: '麻辣串串烧',
             subTitle: '双人免费套餐等你抢购',
             price: '0',
-            distance: '160',
+            distance: '160m',
             mumber: '1426'
         }
     ]
