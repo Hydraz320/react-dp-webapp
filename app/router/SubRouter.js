@@ -4,12 +4,12 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
-import Home from '../containers/Home'
-import User from '../containers/User'
-import City from '../containers/City'
-import Search from '../containers/Search'
-import Detail from '../containers/Detail'
-import NotFound from '../containers/404'
+import Home from 'containers/Home'
+import User from 'containers/User'
+import City from 'containers/City'
+import Search from 'containers/Search'
+import Detail from 'containers/Detail'
+import NotFound from 'containers/404'
 
 export default class SubRouter extends Component {
   constructor(props) {

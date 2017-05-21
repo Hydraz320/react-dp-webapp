@@ -11,15 +11,22 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
+    setTimeout(()=>{
+      this.props.history.push('/city')
+    }, 2000)
+  }
+
+  _jumpToCity() {
+    this.props.history.push('/city')
   }
 
   render() {
     return (
       <div className="back-color">
-        <HomeHeader cityName={this.props.userinfo.cityName} />
-        <Category pages={this.props.swipedata.swipeData} />
+        <HomeHeader cityName={this.props.userinfo.cityName} jumpToCity={this._jumpToCity.bind(this)} />
+        <Category pages={this.props.swipedata.swipeData}/>
         <Ad />
-        <List cityName={this.props.userinfo.cityName} />
+        <List cityName={this.props.userinfo.cityName}/>
       </div>
     )
   }

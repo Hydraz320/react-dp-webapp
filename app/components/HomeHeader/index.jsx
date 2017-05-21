@@ -12,7 +12,7 @@ export default class HomeHeader extends Component {
   render() {
     return (
       <div className="header-container">
-        <div className="header-city">
+        <div className="header-city" onClick={this.props.jumpToCity}>
           <span>{this.props.cityName}</span>
           <svg className="icon icon-unfold" aria-hidden="true">
             <use xlinkHref="#icon-unfold"></use>
