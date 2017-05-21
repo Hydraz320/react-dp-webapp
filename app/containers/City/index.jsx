@@ -8,12 +8,20 @@ import * as userinfoActions from '../../actions/userinfo'
 export default class City extends Component {
   constructor(props) {
     super(props)
-    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
+    // this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
+    console.log(this.props.history)
+  }
+
+  _jumpToUser() {
+    let history = this.props.history
+    history.push('/user', {
+      hello: 'hello user'
+    })
   }
 
   render() {
     return (
-      <div>City</div>
+      <div onClick={this._jumpToUser.bind(this)}>City</div>
     )
   }
 }
