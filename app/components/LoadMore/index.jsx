@@ -21,7 +21,8 @@ export default class LoadMore extends Component {
       console.log('height: ' + windowHeight)
       if (top && top < windowHeight) {
         // 模拟异步
-        setTimeout(loadMoreFn, 2000)
+        // todo 这边逻辑有问题的 延迟两秒执行的代码里存在转换加载中...状态的语句 导致延迟之后切换过快 看不到变化
+        loadMoreFn()
       }
     }
 

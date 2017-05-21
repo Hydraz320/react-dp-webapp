@@ -38,8 +38,10 @@ export default class List extends Component {
     const page = this.state.page
     const result = getListData(cityName, page)
     // 处理数据
-    this._resultHandle(result)
-    this.setState({isLoadingMore: false})
+    setTimeout(() => {
+      this._resultHandle(result)
+      this.setState({isLoadingMore: false})
+    }, 2000)
   }
 
   _resultHandle(result) {
