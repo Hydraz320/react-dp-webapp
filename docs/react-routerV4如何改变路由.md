@@ -67,7 +67,9 @@ export default class RouteMap extends Component {
 ```
 根据文档给的代码段，我们需要首先初始化一个history对象，然后将其交给Router。这里有点Provider的意思哦。事实上，在内部路由的任何组件内，都可以通过this.props.history拿到history对象，是不是很凶残哦。
 
-注意到Router里面先包了一层App，这个组件是containers目录下的"入口"文件。事实上因为依赖于router的处理，入口的意义已经淡化了，但是这样去写的话能够有一个统一的结构，在App里通过this.props.children把Route的路由渲染出来，是不是比没有这一层包裹看起来好点呢？
+~~注意到Router里面先包了一层App，这个组件是containers目录下的"入口"文件。事实上因为依赖于router的处理，入口的意义已经淡化了，但是这样去写的话能够有一个统一的结构，在App里通过this.props.children把Route的路由渲染出来，是不是比没有这一层包裹看起来好点呢？~~
+
+尴尬的是，上面的想法还算是美好，但是会导致路由内部进行push的时候失效……
 
 Route传入的component并非真正的视图组件或容器组件，而是子路由。这里是为了方便管理。在SubRoute内部，组织方式如下：
 ```jsx harmony

@@ -11,9 +11,6 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
-    setTimeout(()=>{
-      this.props.history.push('/city')
-    }, 2000)
   }
 
   _jumpToCity() {

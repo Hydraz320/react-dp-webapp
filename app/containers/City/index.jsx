@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
+
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
@@ -21,7 +23,11 @@ export default class City extends Component {
 
   render() {
     return (
-      <div onClick={this._jumpToUser.bind(this)}>City</div>
+      <div>
+        <div onClick={this._jumpToUser.bind(this)}>City</div>
+        <Link to="/user">To User</Link>
+      </div>
+
     )
   }
 }

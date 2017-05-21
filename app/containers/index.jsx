@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import { withRouter } from 'react-router-dom'
+
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
@@ -55,10 +57,10 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(App))
 
 
 

@@ -17,7 +17,7 @@ export default class AppRouter extends Component {
     return (
       <Router history={customHistory}>
         <App>
-          <Route path="/" component={SubRouter}/>
+          <Route path="/" component={SubRouter} />
         </App>
       </Router>
     )
