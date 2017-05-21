@@ -69,7 +69,19 @@ export default class RouteMap extends Component {
 
 ~~注意到Router里面先包了一层App，这个组件是containers目录下的"入口"文件。事实上因为依赖于router的处理，入口的意义已经淡化了，但是这样去写的话能够有一个统一的结构，在App里通过this.props.children把Route的路由渲染出来，是不是比没有这一层包裹看起来好点呢？~~
 
-尴尬的是，上面的想法还算是美好，但是会导致路由内部进行push的时候失效……
+尴尬的是，上面的想法还算是美好，但是会导致路由内部进行push的时候失效……但是，上述的想法却并没有问题，那么我们应该如何解决呢？
+
+在React-router的文档中其实有对此进行解释(本渣太懒并没有提前通读文档而是直接上手干了 结果定位了好久的问题才发现可能是外面包了一层connect导致的 也就是说和redux的结合问题)。那么只需要对上面的代码段的App组件内部进行如下改写即可，也即，包上一层withRouter。
+
+```jsx harmony
+import { withRouter } from 'react-router-dom'
+
+export default withRouter(connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App))
+
+```
 
 Route传入的component并非真正的视图组件或容器组件，而是子路由。这里是为了方便管理。在SubRoute内部，组织方式如下：
 ```jsx harmony
