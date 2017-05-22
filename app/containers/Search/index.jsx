@@ -5,20 +5,20 @@ import {connect} from 'react-redux'
 
 import * as userinfoActions from '../../actions/userinfo'
 
+import SearchHeader from 'components/SearchHeader'
+
 export default class Search extends Component {
   constructor(props) {
     super(props)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
   }
 
-  componentDidMount() {
-    console.log(this.props.match.params.category)
-    console.log(this.props.match)
-  }
-
   render() {
+    const params = this.props.match.params
     return (
-      <div>Search</div>
+      <div>
+        <SearchHeader keyword={params.keyword} history={this.props.history} />
+      </div>
     )
   }
 }
