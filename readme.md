@@ -12,3 +12,6 @@
 
 5. [react-router V4 如何改变路由](./docs/react-routerV4如何改变路由.md)
 
+6. [react-router V4 可选URL的用法](./docs/react-routerV4可选URL的用法.md)
+
+7. [iconfont的svg报错的解决方法](./docs/iconfont的svg报错的解决方法.md)
