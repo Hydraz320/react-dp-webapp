@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import * as userinfoActions from '../../actions/userinfo'
 
 import SearchHeader from 'components/SearchHeader'
+import SearchList from './subpage/List'
 
 export default class Search extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class Search extends Component {
     return (
       <div>
         <SearchHeader keyword={params.keyword} history={this.props.history} />
+        <SearchList keyword={params.keyword} category={params.category}/>
       </div>
     )
   }
