@@ -11,6 +11,11 @@ export default class Search extends Component {
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
   }
 
+  componentDidMount() {
+    console.log(this.props.match.params.category)
+    console.log(this.props.match)
+  }
+
   render() {
     return (
       <div>Search</div>

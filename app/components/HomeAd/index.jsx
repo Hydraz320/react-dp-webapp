@@ -11,7 +11,6 @@ export default class HomeAd extends Component {
 
   render() {
     let data = this.props.data
-    console.log(data.length)
     return (
       <div className="ad-home">
         <h2 className="ad-title">超值特惠</h2>

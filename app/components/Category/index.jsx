@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import {Link} from 'react-router-dom'
 
 import './index.less'
 
@@ -33,12 +34,12 @@ export default class Category extends Component {
               return (<div key={pageIndex} className="page">
                 {
                   page.map((item, itemIndex) => {
-                    return <div key={itemIndex} className="item">
+                    return <Link to={item.to} key={itemIndex} className="item">
                       <svg className={`icon ${item.iconName}`} aria-hidden="true">
                         <use xlinkHref={`#${item.iconName}`}></use>
                       </svg>
                       <div className="title">{item.title}</div>
-                    </div>
+                    </Link>
                   })
                 }
               </div>)

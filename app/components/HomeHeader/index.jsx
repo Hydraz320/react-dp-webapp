@@ -7,6 +7,21 @@ export default class HomeHeader extends Component {
   constructor(props) {
     super(props)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
+    this.state = {
+      kwd: ''
+    }
+  }
+
+  _changeHandle(e) {
+    this.setState({
+      kwd: e.target.value
+    })
+  }
+
+  _keyUpHandle(e) {
+    if (e.keyCode === 13) {
+      this.props.history.push('/search/all/' + encodeURIComponent(this.state.kwd))
+    }
   }
 
   render() {
@@ -24,7 +39,13 @@ export default class HomeHeader extends Component {
             <svg className="icon icon-search" aria-hidden="true">
               <use xlinkHref="#icon-search"></use>
             </svg>
-            <input type="text" placeholder="请输入关键字"/>
+            <input
+              type="text"
+              placeholder="请输入关键字"
+              onChange={this._changeHandle.bind(this)}
+              onKeyUp={this._keyUpHandle.bind(this)}
+              value={this.state.kwd}
+            />
           </div>
         </div>
 

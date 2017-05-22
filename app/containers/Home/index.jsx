@@ -20,7 +20,7 @@ class Home extends Component {
   render() {
     return (
       <div className="back-color">
-        <HomeHeader cityName={this.props.userinfo.cityName} jumpToCity={this._jumpToCity.bind(this)} />
+        <HomeHeader history={this.props.history} cityName={this.props.userinfo.cityName} jumpToCity={this._jumpToCity.bind(this)} />
         <Category pages={this.props.swipedata.swipeData}/>
         <Ad />
         <List cityName={this.props.userinfo.cityName}/>
