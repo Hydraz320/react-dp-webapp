@@ -6,7 +6,8 @@ import {connect} from 'react-redux'
 import * as userinfoActions from 'actions/userinfo'
 
 import Header from 'components/Header'
-import Info from './subpage/info'
+import Info from './subpage/Info'
+import Comment from './subpage/Comment'
 
 export default class Detail extends Component {
   constructor(props) {
@@ -15,10 +16,12 @@ export default class Detail extends Component {
   }
 
   render() {
+    const id = this.props.match.params.id
     return (
       <div>
         <Header title="商户详情"/>
-        <Info id={this.props.match.params.id}/>
+        <Info id={id}/>
+        <Comment id={id}/>
       </div>
     )
   }

@@ -75,7 +75,7 @@ const detailComment = require('./detail/comment.js')
 router.get('/api/detail/comment/:page/:id', async(ctx) => {
   console.log('详情页 - 用户点评')
 
-  const params = this.params
+  const params = ctx.params
   const page = params.page
   const id = params.id
 
