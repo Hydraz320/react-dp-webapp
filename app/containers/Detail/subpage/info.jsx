@@ -29,6 +29,7 @@ export default class Info extends Component {
       })
     }).catch((e) => {
       if(__DEV__) {
+        console.log(e)
         console.error('详情页 获取商户信息出错')
       }
     })
