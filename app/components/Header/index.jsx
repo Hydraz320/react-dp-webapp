@@ -8,11 +8,15 @@ export default class CityList extends Component {
     super(props)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
   }
+  // 这样写就减少了和history的耦合
+  _backHandle() {
+    window.history.back()
+  }
 
   render() {
     return (
       <div className="common-header-container">
-        <div className="common-header-back" onClick={this.props.backFn}>
+        <div className="common-header-back" onClick={this._backHandle.bind(this)}>
           <svg className="icon icon-yuyin" aria-hidden="true">
             <use xlinkHref="#icon-yuyin"></use>
           </svg>

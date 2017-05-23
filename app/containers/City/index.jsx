@@ -42,7 +42,7 @@ class City extends Component {
   render() {
     return (
       <div>
-        <Header title="选择城市" backFn={this._back.bind(this)}/>
+        <Header title="选择城市"/>
         <CurrentCity cityName={this.props.userinfo.cityName}/>
         <CityList changeFn={this._changeCity.bind(this)}/>
       </div>

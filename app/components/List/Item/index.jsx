@@ -13,7 +13,7 @@ export default class Item extends Component {
   render() {
     const data = this.props.data
     return (
-      <Link to={`/detail/${data.id}`} className="list-item">
+      <Link to={'/detail/' + data.id} className="list-item">
         <div className="item-img-container">
           <img src={data.img} alt={data.title}/>
         </div>

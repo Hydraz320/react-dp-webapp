@@ -8,7 +8,7 @@ import LoadMore from 'components/LoadMore'
 import {getSearchData} from 'fetch/search/search'
 
 // 初始化一个组件的 state
-const initialState = {
+let initialState = {
   data: [],
   hasMore: false,
   isLoadingMore: false,
