@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import {Link} from 'react-router-dom'
 
 import './index.less'
 
@@ -12,7 +13,7 @@ export default class Item extends Component {
   render() {
     const data = this.props.data
     return (
-      <div className="list-item">
+      <Link to={`/detail/${data.id}`} className="list-item">
         <div className="item-img-container">
           <img src={data.img} alt={data.title}/>
         </div>
@@ -29,7 +30,7 @@ export default class Item extends Component {
             <span className="item-number">已售{data.mumber}</span>
           </div>
         </div>
-      </div>
+      </Link>
     )
   }
 }
