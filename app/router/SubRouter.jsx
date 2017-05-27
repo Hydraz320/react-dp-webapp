@@ -22,7 +22,7 @@ export default class SubRouter extends Component {
         <Route exact path="/" component={Home}/>
         <Route path="/city" component={City}/>
         <Route path="/user" component={User}/>
-        <Route exact path="/search/:category/:keyword?" component={Search}/>
+        <Route path="/search/:category/:keyword?" component={Search}/>
         <Route path="/detail/:id" component={Detail}/>
         <Route component={NotFound}/>
       </Switch>
