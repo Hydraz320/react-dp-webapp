@@ -21,7 +21,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="back-color">
-				<HomeHeader cityName={this.props.userinfo.cityName} jumpToCity={this._jumpToCity.bind(this)}/>
+				<HomeHeader cityName={this.props.userinfo.cityName} city="/city" login="/login"/>
 				<Category pages={this.props.swipedata.swipeData}/>
 				<Ad />
 				<List cityName={this.props.userinfo.cityName}/>

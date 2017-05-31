@@ -1,12 +1,9 @@
 import React, {Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'redux'
+import {withRouter} from 'react-router-dom'
 
-// 创建history对象
-import createHistory from 'history/createBrowserHistory'
-const history = createHistory()
-
-export default class Login extends Component {
+class Login extends Component {
     constructor(props) {
         super(props)
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
@@ -18,3 +15,5 @@ export default class Login extends Component {
         )
     }
 }
+
+export default withRouter(Login)

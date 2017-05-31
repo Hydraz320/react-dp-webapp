@@ -4,58 +4,58 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
 }
 
 body, button, input, select, textarea {
-  font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', \5b8b\4f53, sans-serif
+  font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', \5b8b\4f53, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%
+  font-size: 100%;
 }
 
 address, cite, dfn, em, var {
-  font-style: normal
+  font-style: normal;
 }
 
 code, kbd, pre, samp {
-  font-family: courier new, courier, monospace
+  font-family: courier new, courier, monospace;
 }
 
 small {
-  font-size: 12px
+  font-size: 12px;
 }
 
 ol, ul {
-  list-style: none
+  list-style: none;
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline
+  text-decoration: underline;
 }
 
 sup {
-  vertical-align: text-top
+  vertical-align: text-top;
 }
 
 sub {
-  vertical-align: text-bottom
+  vertical-align: text-bottom;
 }
 
 legend {
-  color: #000
+  color: #000;
 }
 
 fieldset, img {
-  border: 0
+  border: 0;
 }
 
 button, input, select, textarea {
-  font-size: 100%
+  font-size: 100%;
 }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0
+  border-spacing: 0;
 }
