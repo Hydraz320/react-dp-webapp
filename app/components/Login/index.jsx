@@ -18,10 +18,10 @@ class Login extends React.Component {
 		})
 	}
 
-	clickHandle() {
+	_clickHandle() {
 		const username = this.state.username
 		const loginHandle = this.props.loginHandle
-		loginHandle(username);
+		loginHandle(username)
 	}
 
 	render() {
@@ -46,7 +46,7 @@ class Login extends React.Component {
 					<input type="text" placeholder="输入验证码"/>
 					<button>发送验证码</button>
 				</div>
-				<button className="btn-login" onClick={this.clickHandle.bind(this)}>登录</button>
+				<button className="btn-login" onClick={this._clickHandle.bind(this)}>登录</button>
 			</div>
 		)
 	}

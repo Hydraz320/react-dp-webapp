@@ -44,7 +44,8 @@ class Login extends Component {
 		userinfo.username = username
 		actions.update(userinfo)
 
-		const params = this.props.params
+		// 拿到url里的可选参数router
+		const params = this.props.match.params
 		const router = params.router
 		if (router) {
 			// 如果url中有登录前的页面router(其实就是为了知道是从哪个页面登录的)
