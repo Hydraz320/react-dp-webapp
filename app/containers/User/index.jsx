@@ -9,7 +9,6 @@ export default class User extends Component {
   constructor(props) {
     super(props)
     // this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
-    console.log(this.props.history)
   }
 
   _jumpToCity() {
