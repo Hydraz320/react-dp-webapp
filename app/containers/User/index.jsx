@@ -18,9 +18,14 @@ export default class User extends Component {
     })
   }
 
+	_jumpToHome() {
+		let history = this.props.history
+		history.push('/')
+	}
+
   render() {
     return (
-      <div onClick={this._jumpToCity.bind(this)}>User</div>
+      <div onClick={this._jumpToHome.bind(this)}>User</div>
     )
   }
 }

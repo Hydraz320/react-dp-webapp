@@ -49,7 +49,7 @@ class Login extends Component {
 		const router = params.router
 		if (router) {
 			// 如果url中有登录前的页面router(其实就是为了知道是从哪个页面登录的)
-			this.props.history.push(router)
+			this.props.history.push(decodeURIComponent(router))
 		} else {
 			this._jumpToUser()
 		}
@@ -57,8 +57,6 @@ class Login extends Component {
 
 	_jumpToUser() {
 		const history = this.props.history
-		console.log('_jumpToUser')
-		console.log(this.state.checking)
 		history.push('/user')
 	}
 
