@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import {withRouter} from 'react-router-dom'
 
 import './index.less'
 
-export default class HomeHeader extends Component {
+class HomeHeader extends Component {
   constructor(props) {
     super(props)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
@@ -58,3 +59,5 @@ export default class HomeHeader extends Component {
     )
   }
 }
+
+export default withRouter(HomeHeader)

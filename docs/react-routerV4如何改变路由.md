@@ -154,5 +154,7 @@ export default List
 
 当然，history还支持replace等多种常用方法，具体就可以去[文档](https://github.com/ReactTraining/history)里看看哦。
 
-好了，就写到这吧！
+## 关于如何在内部深处子组件上使用history
+
+也是套一层withRouter！试试就晓得了。然后this.props.history.xxx稳稳的幸福。
 

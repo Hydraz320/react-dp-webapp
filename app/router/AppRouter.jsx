@@ -6,6 +6,7 @@ import SubRouter from './SubRouter'
 
 // 让Router有用js跳转的能力 另一种方法是link标签
 import createBrowserHistory from 'history/createBrowserHistory'
+
 const customHistory = createBrowserHistory()
 
 export default class AppRouter extends Component {

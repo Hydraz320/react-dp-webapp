@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
 
 import HomeHeader from 'components/HomeHeader'
 import Category from 'components/Category'
@@ -8,25 +9,25 @@ import Ad from './subpage/Ad'
 import List from './subpage/List'
 
 class Home extends Component {
-  constructor(props) {
-    super(props)
-    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
-  }
+	constructor(props) {
+		super(props)
+		this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
+	}
 
-  _jumpToCity() {
-    this.props.history.push('/city')
-  }
+	_jumpToCity() {
+		this.props.history.push('/city')
+	}
 
-  render() {
-    return (
-      <div className="back-color">
-        <HomeHeader history={this.props.history} cityName={this.props.userinfo.cityName} jumpToCity={this._jumpToCity.bind(this)} />
-        <Category pages={this.props.swipedata.swipeData}/>
-        <Ad />
-        <List cityName={this.props.userinfo.cityName}/>
-      </div>
-    )
-  }
+	render() {
+		return (
+			<div className="back-color">
+				<HomeHeader cityName={this.props.userinfo.cityName} jumpToCity={this._jumpToCity.bind(this)}/>
+				<Category pages={this.props.swipedata.swipeData}/>
+				<Ad />
+				<List cityName={this.props.userinfo.cityName}/>
+			</div>
+		)
+	}
 }
 
 // 为什么这里是userinfo呢？为什么HomeHeader传入的是this.props.userinfo.cityName呢？
@@ -38,17 +39,17 @@ class Home extends Component {
 // 或者this.props.xmap进去的x.action creator方法({data})
 // 反正我是清楚了……
 const mapStateToProps = (state) => {
-  return {
-    userinfo: state.userinfo,
-    swipedata: state.swipedata
-  }
+	return {
+		userinfo: state.userinfo,
+		swipedata: state.swipedata
+	}
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {}
+	return {}
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home)
+export default withRouter(connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Home))
