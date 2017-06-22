@@ -6,7 +6,8 @@ let OpenBrowserWebpackPlugin = require('open-browser-webpack-plugin')
 module.exports = {
   entry: path.resolve(__dirname, 'app/index.jsx'),
   output: {
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+	  publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
