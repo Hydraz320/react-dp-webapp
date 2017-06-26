@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { withRouter } from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {bindActionCreators} from 'redux'
@@ -13,53 +13,53 @@ import * as swipeDataActionFromOtherFile from '../actions/swipedata'
 import SwipeData from '../components/Category/swipeData'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
+	constructor(props) {
+		super(props)
+		this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
 
-    this.state = {
-      initDone: false
-    }
-  }
+		this.state = {
+			initDone: false
+		}
+	}
 
-  componentDidMount() {
-    let cityName = LocalStore.getItem(CITYNAME)
-    this.props.userinfoActions.update({
-      cityName: '上海'
-    })
-    this.props.swipeDataActions.swipe({
-      swipeData: SwipeData
-    })
-    this.setState({initDone: true})
-  }
+	componentDidMount() {
+		let cityName = LocalStore.getItem(CITYNAME)
+		this.props.userinfoActions.update({
+			cityName: '上海'
+		})
+		this.props.swipeDataActions.swipe({
+			swipeData: SwipeData
+		})
+		this.setState({initDone: true})
+	}
 
-  render() {
-    return (
-      <div>
-        {
-          this.state.initDone
-            ? this.props.children
-            : <div>加载中...</div>
-        }
-      </div>
-    )
-  }
+	render() {
+		return (
+			<div>
+				{
+					this.state.initDone
+						? this.props.children
+						: <div>加载中...</div>
+				}
+			</div>
+		)
+	}
 }
 
 const mapStateToProps = (state) => {
-  return {}
+	return {}
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-    userinfoActions: bindActionCreators(userInfoActionFromOtherFile, dispatch),
-    swipeDataActions: bindActionCreators(swipeDataActionFromOtherFile, dispatch)
-  }
+	return {
+		userinfoActions: bindActionCreators(userInfoActionFromOtherFile, dispatch),
+		swipeDataActions: bindActionCreators(swipeDataActionFromOtherFile, dispatch)
+	}
 }
 
 export default withRouter(connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(App))
 
 
